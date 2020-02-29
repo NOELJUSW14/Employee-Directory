@@ -4,6 +4,10 @@ import {TransitionMotion, spring, presets} from 'react-motion'
 import EmployeeListItem from './EmployeeList'
 
 class EmployeeList extends React.Component{
+  constructor (props){
+    super(props)
+    console.log(this.props)
+  }
 getDefaultStyles = () => {
   return this.props.employeeData.map(employee =>({...employee, style:{height: 0, opacity: 1}}));
 }

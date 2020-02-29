@@ -1,5 +1,5 @@
 import React from "react";
-import {Panel, ListGroup, ListGroupItem} from 'react-bootstrap'
+import {Card, ListGroup, ListGroupItem} from 'react-bootstrap'
 import EmployeePanelHeader from '../EmployeePanel/EmployeePanelHeader'
 
 
@@ -8,13 +8,13 @@ class EmployeePanel extends React.Component {
     const employeePanelHeader = <EmployeePanelHeader employee={this.props.employee}/>
     const {contact} = this.props.employee
     return(
-      <Panel bsClass="employee-card" header={employeePanelHeader}>
+      <Card bsClass="employee-card" header={employeePanelHeader}>
       <ListGroup>
           <ListGroupItem>{contact.office}</ListGroupItem>
           <ListGroupItem>{contact.mobile}</ListGroupItem>
           <ListGroupItem>{contact.email}</ListGroupItem>
       </ListGroup>
-  </Panel>
+  </Card>
     )
   }
 }

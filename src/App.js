@@ -34,25 +34,25 @@ export default class App extends React.Component {
     }
   }
   onSearch = event => {
-    this.setState({
-      filteredEmployee: filterEmployee(event.target.value, maxResults),
-    })
+    // this.setState({
+    //   filteredEmployee: filterEmployee(event.target.value, maxResults),
+    // })
   }
   onEmployeeClick = employee => {
-    this.setState({
-      selectedEmployee: {
-        name: employee.name,
-        contact: employee.contact,
-        info: employee.data,
-      },
-    })
+    // this.setState({
+    //   selectedEmployee: {
+    //     name: employee.name,
+    //     contact: employee.contact,
+    //     info: employee.data,
+    //   },
+    // })
   }
   render() {
     return (
       <Col lg={8} md={7} sm={4} lgOffset={2}>
         <Col lg={6}>
           <HomePage
-            onSearch={this.onLookup}
+            onSearch={this.onSearch}
             employeeData={this.state.filteredEmployee}
             onEmployeeClick={this.onEmployeeClick}
           />
