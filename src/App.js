@@ -35,7 +35,7 @@ export default class App extends React.Component {
   }
   onSearch = event => {
     this.setState({
-      filteredEmployee: employeeFilter(event.target.value, maxResults),
+      filteredEmployee: filterEmployee(event.target.value, maxResults),
     })
   }
   onEmployeeClick = employee => {

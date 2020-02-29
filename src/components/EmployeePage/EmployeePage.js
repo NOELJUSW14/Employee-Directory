@@ -1,7 +1,17 @@
-import React from "react";
+import React from "react"
+import EmployeePanel from '../EmployeePanel/EmployeePanel.js'
 
-function Container(props) {
-  return <div className={`container${props.fluid ? "-fluid" : ""}`} {...props} />;
+class EmployeePage extends React.Component {
+
+    render() {
+        let {selectedEmployee} = this.props
+        return (
+            <div className="employee-container">
+                <h1 style={{marginLeft: '20px'}}>Employee</h1>
+                <EmployeePanel employee={selectedEmployee}/>
+            </div>
+        );
+    }
 }
 
-export default Container;
+export default EmployeePage;

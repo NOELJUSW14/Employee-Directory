@@ -7,7 +7,6 @@ class EmployeeList extends React.Component{
 getDefaultStyles = () => {
   return this.props.employeeData.map(employee =>({...employee, style:{height: 0, opacity: 1}}));
 }
-};
 getStyles = () => {
   const {employeeData} = this.props;
   return employeeData.map((employee, i) => {
@@ -26,7 +25,7 @@ willEnter(){
     opacity:.9,
   };
 };
-willLeave (){
+willLeave(){
   return{
     height: spring(1),
     opacity: spring(.9),
@@ -49,6 +48,7 @@ render(){
             }
           </TransitionMotion>
   )
+}
 }
 
 export default EmployeeList;
