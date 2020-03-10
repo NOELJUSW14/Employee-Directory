@@ -1,8 +1,8 @@
 import React from 'react'
 
 class EmployeeListItem extends React.Component {
-  onSelect = () => {
-    this.props.onEmployeeSelect(this.props.employee)
+  onClick = () => {
+    this.props.onEmployeeClick(this.props.employee)
   }
   render() {
     const { name, info } = this.props.employee
@@ -11,9 +11,9 @@ class EmployeeListItem extends React.Component {
       <div
         className="employee-item"
         style={this.props.style}
-        onSelect={this.onSelect}
+        onClick={this.onSelect}
       >
-        <img src={image} />
+        <img src={image} alt="employeeImg" />
         <div className="employee-item-text">
           <h2>{name}</h2>
           <p>{info}</p>
